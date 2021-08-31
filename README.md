@@ -9,4 +9,7 @@ The purpose of this challenge was to complete an interactive dashboard to visual
  - Create a guage "tachometer" showing the amount of times volunteer washed belly button on weekly basis
  - Customize dashboard style
 
+## Dashboard Preview
 
+![image](https://github.com/sbretag/plotly/blob/main/images/Bellybutton1of2.png)
+![image](https://github.com/sbretag/plotly/blob/main/images/bellybutton2of2.png)
