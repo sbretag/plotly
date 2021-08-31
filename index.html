@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Greek gods</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bellybutton BioDiversity</title>
+  <link 
+    rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
+
+<!--Header & Navigation -->
 <body>
-    <div id="plot"></div>
-    <script src="data.js"></script>
-    <script src="plots.js"></script>
+<div class="navbar"> 
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="header"> 
+          <ul>
+            <li><a href="#bc">Top 10 Bacteria</a></li>
+            <li><a href="#bubdoc">Bacteria Cultures Per Sample</a></li>
+            <li><a href="#gmon">Washing Frequency Guage</a></li>
+          </ul>  
+        </div> 
+      </nav>  
+    </header>  
+  </div> 
+<!--Header & nav bar end-->      
+
+<!--<body> -->
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style="color: rgb(30, 30, 32);"><strong>Belly Button BioDiversity Dashboard</strong></h1>
+        <p style="color: rgb(8, 8, 8);"><strong>Use the interactive charts below to explore the dataset</strong></p>
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <br>
+        <br>
+        <h4 style="color: black;"><strong>Select Test Participants </strong></h4>
+        <br>
+        <div class="well">
+          <h5><strong>Test Subject ID No.:</strong></h5>
+
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>DEMOGRAPHIC INFO</strong></h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-9 text-center">
+        <div id="bc"></div>
+        <br>
+        <br>
+        <h3 style="color: rgb(2, 2, 2);"><strong>The bar chart below shows the top 10 bacteria cultures found in test subject </strong></h3>
+        <br>
+        <div id="bar"></div>
+        <br>
+      </div>
+     
+    <!--Bubble Chart-->  
+    </div>
+    <!--<div margin: 25px></div>-->
+
+      <div class="row">
+      <div class="col-md-12 text-center">
+        <div id="bubdoc"></div>
+        <br>
+        <br>  
+        <h3 style="color:black;"><strong>The bubble chart below the amount of bacteria per sample for the selected test subject. <br> Hover over each bubble to see bacteria name and quantity.</strong></h3>
+        <br>
+        <div id="bubble" align="center"></div>
+        <br>
+      </div>
+
+  <div class="col-md-12 text-center">
+    <div id="gmon"></div>
+    <br>
+    <br>  
+    <h3 style="color: black;"><strong>The guage below displays how often test subject washed belly button on a weekly basis </strong></h3>
+    <br>
+  </div>
+  <div class="col-md-12">
+    <div id="gauge" align="center"></div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/samples.json"></script>
+  <script src="static/js/charts.js"></script>
+
 </body>
+
 </html>
