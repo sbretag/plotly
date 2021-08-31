@@ -10,6 +10,8 @@ The purpose of this challenge was to complete an interactive dashboard to visual
  - Customize dashboard style
 
 ## Dashboard Preview
-
 ![image](https://github.com/sbretag/plotly/blob/main/images/Bellybutton1of2.png)
 ![image](https://github.com/sbretag/plotly/blob/main/images/bellybutton2of2.png)
+
+## Deployment
+- [Github page deployment](https://sbretag.github.io/plotly/)
